@@ -8,12 +8,12 @@ public class JPAUtil {
 
 	private static final EntityManagerFactory factory = Persistence.createEntityManagerFactory("financas-jpa");
 	
-	public EntityManager get() {
+	public EntityManager getEntityManager() {
 		return factory.createEntityManager();
 	}
 	
 	public static void main(String[] args) {
-		EntityManager manager = new JPAUtil().get();
+		EntityManager manager = new JPAUtil().getEntityManager();
 		manager.close();
 	}
 }

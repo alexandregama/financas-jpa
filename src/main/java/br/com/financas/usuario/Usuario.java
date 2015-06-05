@@ -15,7 +15,7 @@ public class Usuario {
 	@Id 
 	// IDENTITY funciona no MySQL pois internamente ele entende que é auto-incremento
 	// SEQUENCE NÃO vai funcionar no MYSQL pois ele não suporta. Postgres e Oracle suportam sequence
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Oracle e Postgres não suportam identity(auto-increment)
 	private Long id;
 
 	@Column(name = "nome")

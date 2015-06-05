@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Conta {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue //Por padrão temos GenerationType.AUTO
 	// Mysql - auto increment
 	// SQL Server - identity
 	// Postgres e Oracle - sequence

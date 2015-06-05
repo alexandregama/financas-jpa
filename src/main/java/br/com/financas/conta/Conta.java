@@ -23,7 +23,25 @@ public class Conta {
 	private String agencia;
 	
 	private String numero;
+	
+	public Conta(String titular, String banco, String agencia,
+			String numero) {
+		this.titular = titular;
+		this.banco = banco;
+		this.agencia = agencia;
+		this.numero = numero;
+	}
+	
+	@Override
+	public String toString() {
+		return "Conta [id=" + id + ", titular=" + titular + ", banco=" + banco
+				+ ", agencia=" + agencia + ", numero=" + numero + "]";
+	}
 
+	public Long getId() {
+		return id;
+	}
+	
 	public String getTitular() {
 		return titular;
 	}

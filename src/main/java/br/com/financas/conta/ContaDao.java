@@ -11,9 +11,7 @@ public class ContaDao {
 	}
 	
 	public void salva(Conta conta) {
-		manager.getTransaction().begin();
 		manager.persist(conta);
-		manager.getTransaction().commit();
 	}
 
 	public Conta buscaPorId(Long id) {
@@ -21,9 +19,7 @@ public class ContaDao {
 	}
 	
 	public void exclui(Conta conta) {
-		manager.getTransaction().begin();
 		manager.remove(conta);
-		manager.getTransaction().commit();
 	}
 	
 }

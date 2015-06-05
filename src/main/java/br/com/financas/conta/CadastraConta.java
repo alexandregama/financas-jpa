@@ -8,9 +8,13 @@ public class CadastraConta {
 
 	public static void main(String[] args) {
 		EntityManager manager = new JPAUtil().getEntityManager();
+		manager.getTransaction().begin();
+		
 		Conta contaDoAlexandre = new Conta("Alexandre Gama", "Itau", "4077", "067584-5");
 		ContaDao dao = new ContaDao(manager);
 		dao.salva(contaDoAlexandre);
+		
+		manager.getTransaction().commit();
 		manager.close();
 	}
 	

@@ -23,6 +23,10 @@ public class Conta {
 	private String agencia;
 	
 	private String numero;
+
+	@Deprecated //Hibernate eyes only
+	Conta() {
+	}
 	
 	public Conta(String titular, String banco, String agencia,
 			String numero) {

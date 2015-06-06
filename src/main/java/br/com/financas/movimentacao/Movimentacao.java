@@ -6,9 +6,11 @@ import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -26,7 +28,10 @@ public class Movimentacao {
 	
 	private String descricao;
 
+//	Temos um erro ao manipular uma Movimentacao quando não mapeamos a Conta
 	@ManyToOne
+	@JoinColumn(foreignKey = @ForeignKey(name = "fk_mov_conta"), name = "conta_id")
+//	@org.hibernate.annotations.ForeignKey(name = "fk_movimentacao_conta") Aqui usamos do Hibernate
 	private Conta conta;
 	
 	private BigDecimal valor;

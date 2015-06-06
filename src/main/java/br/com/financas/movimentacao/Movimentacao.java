@@ -3,6 +3,7 @@ package br.com.financas.movimentacao;
 import java.math.BigDecimal;
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -29,7 +30,7 @@ public class Movimentacao {
 	private String descricao;
 
 //	Temos um erro ao manipular uma Movimentacao quando não mapeamos a Conta
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(foreignKey = @ForeignKey(name = "fk_mov_conta"), name = "conta_id")
 //	@org.hibernate.annotations.ForeignKey(name = "fk_movimentacao_conta") Aqui usamos do Hibernate
 	private Conta conta;

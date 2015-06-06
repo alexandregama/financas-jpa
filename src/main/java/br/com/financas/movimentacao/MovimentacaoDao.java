@@ -13,5 +13,9 @@ public class MovimentacaoDao {
 	public void salva(Movimentacao movimentacao) {
 		manager.persist(movimentacao);
 	}
+
+	public Movimentacao buscaPorId(Long id) {
+		return manager.find(Movimentacao.class, id);
+	}
 	
 }

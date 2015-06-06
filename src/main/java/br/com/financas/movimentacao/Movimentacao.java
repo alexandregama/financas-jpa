@@ -54,6 +54,13 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 
+	@Override
+	public String toString() {
+		return "Movimentacao [id=" + id + ", descricao=" + descricao
+				+ ", conta=" + conta + ", valor=" + valor + ", data=" + data
+				+ ", tipo=" + tipo + "]";
+	}
+
 	public Long getId() {
 		return id;
 	}

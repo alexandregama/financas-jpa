@@ -65,5 +65,9 @@ public class Conta {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 }

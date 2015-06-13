@@ -1,4 +1,4 @@
-package br.com.financas.conta;
+package br.com.financas.conta.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+import br.com.financas.conta.Conta;
 
 public class ListaContaJdbc {
 

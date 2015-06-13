@@ -1,9 +1,11 @@
-package br.com.financas.conta;
+package br.com.financas.conta.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
+import br.com.financas.conta.Conta;
 
 public class InsereContaJdbc {
 

@@ -11,7 +11,7 @@ public class Conta {
 
 	@Id
 	@GeneratedValue //Por padrão temos GenerationType.AUTO
-	// Mysql - auto increment
+	// Mysql - auto increment identity
 	// SQL Server - identity
 	// Postgres e Oracle - sequence
 	private Long id; //BigInt para o MySQL

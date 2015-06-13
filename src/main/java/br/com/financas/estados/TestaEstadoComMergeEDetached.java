@@ -13,9 +13,9 @@ public class TestaEstadoComMergeEDetached {
 		manager.getTransaction().begin();
 		Conta conta = manager.find(Conta.class, 2l); //gera um Select
 		manager.detach(conta);
-		conta.setNumero("22222-1");
+		conta.setNumero("333333-1");
 		manager.merge(conta);
-		conta.setNumero("44444-3");
+		conta.setNumero("55555-3");
 		manager.getTransaction().commit();
 		manager.close();
 	}

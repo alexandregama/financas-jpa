@@ -1,10 +1,14 @@
 package br.com.financas.conta;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import br.com.financas.movimentacao.ContaListener;
+
+@EntityListeners(ContaListener.class)
 @Table(name = "conta")
 @Entity
 public class Conta {

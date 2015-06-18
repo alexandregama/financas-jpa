@@ -20,6 +20,7 @@ import javax.persistence.TemporalType;
 
 import br.com.financas.conta.Conta;
 
+//@EntityListeners({MovimentacaoListener.class, ContaListener.class}) Podemos passar um array de EntityListener
 @EntityListeners(MovimentacaoListener.class)
 @Table(name = "movimentacao")
 @Entity

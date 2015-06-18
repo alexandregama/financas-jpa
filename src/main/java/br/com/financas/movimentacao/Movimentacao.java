@@ -5,6 +5,7 @@ import java.util.Calendar;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ForeignKey;
@@ -13,14 +14,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import br.com.financas.conta.Conta;
 
+@EntityListeners(MovimentacaoListener.class)
 @Table(name = "movimentacao")
 @Entity
 public class Movimentacao {
@@ -54,12 +54,6 @@ public class Movimentacao {
 		this.conta = conta;
 		this.valor = valor;
 		this.tipo = tipo;
-	}
-
-	@PrePersist
-	@PreUpdate
-	public void prePersist() {
-		this.data = Calendar.getInstance();
 	}
 	
 	@Override

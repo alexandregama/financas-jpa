@@ -13,7 +13,7 @@ public class CadastraMovimentacaoComConta {
 		EntityManager manager = new JPAUtil().getEntityManager();
 		manager.getTransaction().begin();
 		
-		Conta bradesco = new Conta("Gustavo", "Bradesco", "49575", "64748-9");
+		Conta bradesco = new Conta("Antonio", "Santander", "19874", "14748-9");
 		
 		Movimentacao movimentacao = new Movimentacao("Academia", bradesco, new BigDecimal("150"), TipoMovimentacao.SAIDA);
 		

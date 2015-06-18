@@ -13,6 +13,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -54,6 +56,12 @@ public class Movimentacao {
 		this.tipo = tipo;
 	}
 
+	@PrePersist
+	@PreUpdate
+	public void prePersist() {
+		this.data = Calendar.getInstance();
+	}
+	
 	@Override
 	public String toString() {
 		return "Movimentacao [id=" + id + ", descricao=" + descricao

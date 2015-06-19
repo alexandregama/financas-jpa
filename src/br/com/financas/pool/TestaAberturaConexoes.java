@@ -13,7 +13,7 @@ public class TestaAberturaConexoes {
 			System.out.println("Criado EntityManager número " + i);
 		}
 		
-		Thread.sleep(30 * 1000); //Dormir por 30 segundos
+//		Thread.sleep(30 * 1000); //Dormir por 30 segundos
 	}
 
 }

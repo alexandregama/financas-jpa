@@ -16,6 +16,12 @@
 			<property name="hibernate.connection.characterEncoding" value="UTF-8"/>
 			<property name="hibernate.generate_statistics" value="true"></property>
 			<property name="hibernate.connection.charSet" value="UTF-8"/>
+			
+			<property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+			<property name="hibernate.c3p0.min_size" value="5" />
+			<property name="hibernate.c3p0.max_size" value="20" />
+			<property name="hibernate.c3p0.timeout" value="180" />
+			<property name="hibernate.c3p0.idle_test_period" value="100" />			
 		</properties>
 	</persistence-unit>
 </persistence>
